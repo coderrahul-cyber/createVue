@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register data</title>
+    <link rel="stylesheet" href="../stylesheets/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Login to Account</div>
+        <% if(error !== ''){ %>
+            <div class="error"><%= error %></div>
+        <% } %>
+        <form action="/login" method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="Username">
+        
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="Password">
+        
+            <input type="submit" value="Login">
+        </form>
+        
+         </form>
+         <a href="/" class="bu">Don't Have a Account ?</a>
+
+    </div>
+
+    <script src="../javascripts/login.js"></script>
+</body>
+</html>

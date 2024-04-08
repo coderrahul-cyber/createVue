@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background-color: #caf0f8;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2vmax;
+
+        height: 99vh;
+      }
+      .dp {
+        /* border-radius: 50%; */
+        overflow: hidden;
+      width: 150px;
+      height: 150px;
+      }
+      .dp img {
+        height: 100%;
+        width: 100%;
+        object-fit:scale-down;
+        /* image-resolution: 300dpi; */
+  image-rendering: crisp-edges;
+        object-position: center;
+        image-resolution: 300dpi;
+      }
+      form {
+        border: 1px solid rgba(255, 235, 205, 0.308);
+        /* padding: 1px; */
+        min-height: 30vh;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        min-width: 50vw;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .input-file {
+        display: none;
+      }
+      .file-label {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 50%;
+        width: 6vmax;
+        height: 7vmax;
+        background: url("../images/default/add_photo_alternate_outlined.svg")
+          no-repeat center;
+        border: 1px solid;
+        transition: all 0.3s ease;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .file-label:hover {
+        transform: scale(1.1, 1.1);
+      }
+
+      .heading {
+        font-size: 2vmax;
+        text-transform: capitalize;
+      }
+      .cancel a{
+        text-decoration: none;
+        transition: all 0.5s ease;
+      }
+      .cancel  a:hover{
+        text-decoration: underline;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dp">
+      <% if(user.dp !== ''){%>
+
+      <img src="../images/dp/<%= user.dp %>" alt="img" />
+      <%}else{%>
+      <img src="../images/default/dp.png" alt="img" />
+      <%}%>
+    </div>
+    <div class="heading">update your new dp..</div>
+    <form action="/profile/dpUP" method="post" enctype="multipart/form-data">
+      <input type="file" name="dp" id="fileInput" class="input-file" />
+      <label for="fileInput" class="file-label"></label>
+    </form>
+    <div class="cancel"><a href="/profile">cancel</a></div>
+
+    <script>
+      document.querySelector("form input").addEventListener("change", () => {
+        // if user change/ok the input then only submit the form
+        document.querySelector("form").submit();
+        console.log("done");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register data</title>
+    <link rel="stylesheet" href="../stylesheets/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Register for New Account</div>
+        <% if(error && error.length > 0){ %>
+            <p class="error"><%= error %></p>
+            <% } %>
+          
+        
+        
+         <form  action="/register" method="post">
+            <label for="fullname">Enter Your Name</label>
+            <input type="text" name="fullname" placeholder="FullName">
+            <label for="username">Enter a unique username</label>
+            <input type="text" name="username" placeholder="username">
+            <label for="email">Enter The Email<br>(Not already used)</label>
+            <input type="email" name="email" placeholder="xyz@gmail.com">
+            <label for="password">Create Password</label>
+            <input id="password" type="password" name="password" placeholder="Password">
+            <input type="submit">
+         </form>
+
+         <a href="/login" class="bu">Already Have a Account</a>
+    </div>
+
+    <script src="../javascripts/login.js"></script>
+</body>
+</html>

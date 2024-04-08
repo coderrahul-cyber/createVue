@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/profile.css">
+    <link rel="stylesheet" href="../stylesheets/footer.css">
+
+</head>
+<body>
+    <div class="detail_box">
+        <div class="dp">
+            <% if(user.dp !== ''){%>
+               <img src="../images/dp/<%= user.dp %>" alt="img">
+
+            <%}else{%>
+              <img src="../images/default/dp.png" alt="img" />
+          <%}%>
+            
+        
+         </div>
+         
+        <div class="name">@<%= user.username %></div>
+        <div class="n"><%= user.fullname %></div>
+        <% if(user.bio && user.bio.trim() !=='') {%>
+        <div class="bio"><%=user.bio %></div>
+        <% } %> 
+        <div class="uploadss">
+            <a href="/profile/uploads" class="uplodd"><button>Upload</button></a>
+            <a href="/profile/edit"><button>Edit Profile</button></a>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+      <div class="cardD">
+        <div class="blu"></div>
+        <h1>Desgin..</h1>
+       </div>
+       <% if (userpostid && userpostid.postId.length > 0) { %>
+        <% userpostid.postId.forEach(postItem => { %>
+            <div class="cards">
+                <div class="ii">
+                    <img src="../images/uploads/<%= postItem.image %>" alt="">
+                </div>
+               <% if(postItem.tittle && postItem.tittle.trim() !== ''){%>
+                  <div class="tittle"><%= postItem.tittle %></div>
+                <%}%>
+                <%if(postItem.description && postItem.description.trim() !== ''){%>
+                  <div class="des"><%= postItem.description %></div>
+
+                <%}%>
+
+            </div>
+        <% }); %>
+       <% } %>
+    
+    </div>
+
+
+   <% include ./partials/footer.ejs %>
+    
+
+
+    <script>
+        const dp= document.querySelector(".dp img");
+        dp.addEventListener("click" , ()=>{
+          console.log("clicked");
+          
+          window.location.href = '/profile/dpCH'
+        })
+
+
+
+
+
+
+    </script>
+</body>
+</html>

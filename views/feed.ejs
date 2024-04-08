@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="../stylesheets/feed.css">
+</head>
+<body> 
+ 
+        <header>
+          <div class="video-container">
+            <video autoplay muted loop id="video-background">
+                <source  src="../videos/back.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+         <div class="tittle">
+          <h1>CreatiVue.. Visualize. Create. Share. CreatiVue.. Visualize. Create. Share. CreatiVue.. Visualize. Create. Share.</h1>
+         </div>
+        </header>
+       <div class="container">
+    <% if (posts && posts.length > 0) { %>
+        <% posts.forEach(postItem => { %>
+            <div class="cards">
+                <img src="../images/uploads/<%= postItem.image %>" alt="">
+                <div class="name">@<%= postItem.userID.username %></div>
+            </div>
+        <% }); %>
+    <% } %>
+</div>
+
+      
+    
+        
+        <footer>
+          <div class="bar">
+              <a href="/feed">
+                  <img src="../images/default/home-01-stroke-rounded.svg" alt="">
+              </a>
+              <a href="/profile">
+                  <img src="../images/default/profile-02-stroke-rounded.svg" alt="">
+              </a>
+              <a href="/logout">
+                  <img src="../images/default/logout-circle-01-stroke-rounded.svg" alt="">
+              </a>
+          </div>
+      </footer>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/edit.css">
+</head>
+<body>
+    <div class="head">
+        <h3>Update The Data In The Profile</h3>
+    </div>
+    <form action="/profile/infor" method="post" enctype="application/x-www-form-urlencoded">
+        <div class="cancel"><a href="/profile"><img src="../images/default/cross.svg" alt=""></a></div>
+        <% if(error !== ''){ %>
+            <div class="error"><%= error %></div>
+        <% } %>
+
+
+        <% if(user.username && user.username.trim() !== ''){ %>
+            <label for="username">UserName</label>
+            <input type="text" name="username" placeholder="<%= user.username %>">
+        <% } %>
+        <% if(user.fullname && user.fullname.trim() !== ''){ %>
+            <label for="fullname">Full name</label>
+            <input type="text" name="fullname" placeholder="<%= user.fullname %>">
+        <% } %>
+
+            <label for="bio">Bio</label>
+            <textarea maxlength="80" name="bio" class="bio" cols="30" rows="10"><%= user.bio %></textarea>
+
+        <input type="submit" value="Update">
+    </form>
+    
+
+  
+</body>
+</html>

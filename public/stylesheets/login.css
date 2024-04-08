@@ -1,0 +1,151 @@
+@font-face {
+  font-family: cool;
+  src: url("../font/freya.ttf");
+}
+@font-face {
+  font-family: nice;
+  src: url("../font/NBInternationalProBoo.ttf");
+}
+@font-face {
+  font-family: real;
+  src: url("../font/Rejouice-Headline.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #dda15e;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+.container {
+  box-shadow: 0 0 10px #fefae0; 
+  animation: glow 4s infinite alternate ease;
+  border-radius: 10px;
+  background-color: #fefae0;
+  position: absolute;
+  font-size: 1.8vmin;
+  min-width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #e3f3e3; 
+  }
+  to {
+    box-shadow: 0 0 30px #fefae0,  0 0 40px #fefae0,
+      0 0 50px #fefae0; 
+  }
+}
+
+.heading {
+  padding: 10px;
+  font-size: 2.5vmax;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: cool;
+  color: #606c38;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px; /* Adjust this value to control the space between the underline and the text */
+  width: 100%;
+  height: 1px;
+  background-color: #606c38; /* Use the same color as the text */
+  transition: all 0.4s ease;
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: bottom left;
+}
+
+.heading:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+}
+.heading:hover {
+  padding-bottom: 15px;
+}
+
+.container form {
+  /* background-color: blue; */
+  display: flex;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  flex-direction: column;
+  padding: 1em;
+  font-family: real;
+  font-weight: 0;
+  color: #606c38;
+  width: 80%;
+  /* gap: 3px; */
+  text-align: center;
+}
+form input {
+  margin-bottom: 1vh;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  overflow: auto;
+  text-align: center;
+  transition: 0.4s ease all;
+}
+input:hover:not(:last-child) {
+  transform: scale(1.1, 1.1);
+}
+input:last-child {
+  background-color: #606c38;
+  color: #fefae0;
+  cursor: pointer;
+}
+form label {
+  padding: 2px;
+  font-size: 2vmin;
+}
+.error{
+   font-family: 'Courier New', Courier, monospace;
+   font-size: medium;
+   color: red;
+   text-wrap: wrap;
+   width: 90%;
+   text-align: center;
+}
+
+.bu{
+  color: #283618;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.bu::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: 10px; /* Adjust this value to control the space between the underline and the text */
+  width: 80%;
+  height: 1px;
+  background-color: #606c38; /* Use the same color as the text */
+  transition: all 0.4s ease;
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: bottom left;
+}
+
+.bu:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+}
+.bu:hover {
+  padding-bottom: 15px;
+}
