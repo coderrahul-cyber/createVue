@@ -158,6 +158,7 @@ router.post("/dpUP", upload.single("dp"), async (req, res) => {
 
 router.get("/delete/:id", async (req, res) => {
   const id = req.params.id;
+  
   // deleting the post from profile and from local database
   try {
     const post = await postModel.findById(id);
