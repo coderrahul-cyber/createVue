@@ -149,3 +149,8 @@ form label {
 .bu:hover {
   padding-bottom: 15px;
 }
+.later{
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: #020202;
+}
