@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
 }
 .container {
   box-shadow: 0 0 10px #fefae0; 

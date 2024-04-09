@@ -50,8 +50,12 @@
                 <%}%>
                 <%if(postItem.description && postItem.description.trim() !== ''){%>
                   <div class="des"><%= postItem.description %></div>
-
+                  
                 <%}%>
+                <a href="/profile/delete/<%= postItem._id %>">
+                    <img class="delete" src="../images/default/delete-01-stroke-rounded.svg">
+                </a>
+                
 
             </div>
         <% }); %>

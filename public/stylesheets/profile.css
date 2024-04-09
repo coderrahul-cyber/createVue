@@ -240,10 +240,19 @@ img:hover {
   transform: scale(1.1, 1.1);
 }
 
+.delete{
+  position: absolute;
+  display: inline;
+  top: 10px;
+  right: 10px;
+  filter: invert(1);
+  z-index: 100;
+}
+
 @media screen and (max-width: 768px) {
   .cards {
     min-height: 400px;
-    margin: 0 10px 10px 0;
+    margin: 10px 0;
   }
   .ii img {
     object-fit: cover;
