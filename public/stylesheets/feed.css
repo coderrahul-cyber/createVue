@@ -61,6 +61,7 @@ header {
   color: #f2e8cf;
   font-family: des;
   font-size: 20vmin;
+  padding-bottom: 2vw;
   white-space: nowrap;
   display: inline-block;
   overflow: hidden;
@@ -184,7 +185,25 @@ footer {
   }
   .container {
     margin-top: 20vh;
+    /* height:min-content; */
   }
 }
+
+.loader{
+  position:absolute;
+  top: -110%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+/* .loaded { */
+  /* display: none; */
+/* } */
+
 
 

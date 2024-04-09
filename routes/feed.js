@@ -9,7 +9,7 @@ const postModel = require('../model/post.model');
 router.get('/', async (req, res) => {
     try {
         const posts = await postModel.find({}).populate('userID' , 'username');
-        res.render('feed', { posts: posts });
+        res.render('feed', { posts: posts});
     } catch (error) {
         console.error("Error fetching posts:", error);
         res.status(500).send("Internal Server Error");

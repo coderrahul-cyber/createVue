@@ -1,5 +1,7 @@
 public/images
 public/font
 public/videos
+public/stylesheets/loading.css
 node_modules
+views/loading.ejs
 package-lock.json
