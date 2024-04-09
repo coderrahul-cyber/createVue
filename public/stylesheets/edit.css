@@ -1,3 +1,6 @@
+
+
+
 textarea {
   padding-top: 8px;
   text-align: center;
@@ -8,14 +11,12 @@ background-color: #b7e4c7;
   border-radius: 2em;
 }
 textarea:focus{
-    box-shadow: 13px 7px 24px 10px #b7e4c7c0;
-    
+    box-shadow: 13px 7px 24px 10px #b7e4c7c0;   
 }
 * {
   margin: 0;
   padding: 0;
 }
-
 body {
   height: 100vh;
   width: 100vw;
