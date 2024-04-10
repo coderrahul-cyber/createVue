@@ -101,7 +101,7 @@ header {
   overflow: hidden;
   /* padding: 5px; */
   width: 15%;
-  color: #f2e8cf;
+  color: #000000;
   height: max-content;
   /* background-color:black; */
 }
@@ -127,6 +127,8 @@ img:hover {
   transform: scale(1.1, 1.1);
 }
 .cards:hover .name{
+  text-transform: capitalize;
+  margin-top: 6px;
   opacity: 1;
 }
 .cards .name {
@@ -189,21 +191,6 @@ footer {
   }
 }
 
-.loader{
-  position:absolute;
-  top: -110%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-}
-
-/* .loaded { */
-  /* display: none; */
-/* } */
 
 
 
