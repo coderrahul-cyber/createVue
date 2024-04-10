@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feed</title>
+    <link rel="shortcut icon" href="../images/default/aa.png" type="image/x-icon">
+    <title>CreatiVue-Feed</title>
     <link rel="stylesheet" href="../stylesheets/feed.css">
 </head>
 <body> 
@@ -21,6 +22,11 @@
                 <div class="cards">
                     <img src="../images/uploads/<%= postItem.image %>" alt="">
                     <div class="name"><%= postItem.tittle %></div>
+                    <a href="/feed/down/<%= postItem._id %>">
+                        <img class="down" src="../images/default/download-7.png" alt="">
+
+                    </a>
+
                 </div>
             <% }); %>
         <% } %>

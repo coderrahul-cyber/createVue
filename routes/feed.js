@@ -23,6 +23,18 @@ router.get('/', async (req, res) => {
 });
 
 
+router.get("/down/:id" , async (req,res)=>{
+    const id = req.params.id ;
+    const post = await postModel.findById(id) ;
+    if(!post){
+        return res.status(404).send("Post does not found");
+    }
+
+    const file = path.join(__dirname , "../public/images/uploads/", post.image);
+    res.download(file , post.image);
+
+})
+
 
 
 

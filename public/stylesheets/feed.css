@@ -123,6 +123,20 @@ header {
   object-fit: cover;
   object-position: center;
 }
+.cards  .down{
+  position: absolute;
+  /* z-index: 100; */
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.cards  .down:hover{
+  transform: scale(1.1,1.1);
+  filter: invert(1);
+}
 img:hover {
   transform: scale(1.1, 1.1);
 }
@@ -188,6 +202,10 @@ footer {
   .container {
     margin-top: 20vh;
     /* height:min-content; */
+  }
+  .cards  .down{
+    width: 30px;
+    height: 30px;
   }
 }
 

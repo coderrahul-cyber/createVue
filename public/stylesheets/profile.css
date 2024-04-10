@@ -193,6 +193,7 @@ img:hover {
   /* background-color: bisque; */
   grid-column: 1 / -1;
   position: relative;
+  margin-bottom: 15px;
 }
 .cardD .blu {
   height: 100px;
@@ -213,7 +214,7 @@ img:hover {
 .cardD:hover .blu {
   position: absolute;
   top: 25%;
-  transform: translate(-40%, 40%) rotate(-15deg);
+  transform: translate(90%, -90%) rotate(-15deg);
 }
 
 .uploadss {
