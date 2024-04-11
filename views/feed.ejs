@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/default/aa.png" type="image/x-icon">
     <title>CreatiVue-Feed</title>
-    <link rel="stylesheet" href="../stylesheets/feed.css">
+    <link rel="stylesheet" href="../stylesheets/feed.css">  
+    <link rel="stylesheet" href="../stylesheets/loader.css">
 </head>
 <body> 
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
         <header>
           <div class="video-container">
             <img src="../videos/cloud-4058_512.gif" id="video-background">
@@ -49,5 +53,17 @@
               </a>
           </div>
       </footer>
+
+      <script>
+        // Select the loader container
+var loaderContainer = document.querySelector(".loader-container");
+
+// Listen for the window's load event
+window.addEventListener("load", function() {
+    // Hide the loader when the window finishes loading
+    loaderContainer.style.display = "none";
+});
+
+      </script>
 </body>
 </html>
