@@ -168,9 +168,17 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .cards {
-    width: 100%;
-    min-height: 400px;
+    width: max-content;
     margin: 0 10px 10px 0;
+  }
+  .cards img {
+    /* image-rendering: optimizeQuality; */
+    border-radius: 15px;
+    width:350px;
+    height:350px;
+    transition: all 0.3s ease;
+    object-fit: cover;
+    object-position: center;
   }
   .tittle {
     padding: 0;
