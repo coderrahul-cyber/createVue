@@ -16,24 +16,9 @@
 }
 body {
   position: relative;
-  background-color: #f2e8cf;
+  background:linear-gradient(to right , #5433FF , #20BDFF,#A5FECB);
   width: 100vw;
   min-height: 100vh;
-}
-.video-container {
-  z-index: 2;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-#video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 header {
   position: fixed;
@@ -65,7 +50,7 @@ header {
   white-space: nowrap;
   display: inline-block;
   overflow: hidden;
-  animation: mov 15s infinite linear;
+  animation: mov 15s infinite ease;
 }
 @keyframes mov {
   from {
@@ -100,7 +85,7 @@ header {
   position: relative;
   overflow: hidden;
   /* padding: 5px; */
-  width: 15%;
+  width:max-content;
   color: #000000;
   height: max-content;
   /* background-color:black; */
@@ -114,11 +99,11 @@ header {
 }
 
 .cards img {
-  image-rendering: optimizeQuality;
+  /* image-rendering: optimizeQuality; */
   border-radius: 15px;
   position: relative;
-  width: 100%;
-  height: 90%;
+  width:15vw;
+  height: 15vw;
   transition: all 0.3s ease;
   object-fit: cover;
   object-position: center;
@@ -137,9 +122,7 @@ header {
   transform: scale(1.1,1.1);
   filter: invert(1);
 }
-img:hover {
-  transform: scale(1.1, 1.1);
-}
+
 .cards:hover .name{
   text-transform: capitalize;
   margin-top: 6px;

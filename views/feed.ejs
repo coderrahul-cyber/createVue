@@ -13,9 +13,6 @@
         <div class="loader"></div>
     </div>
         <header>
-          <div class="video-container">
-            <img src="../videos/cloud-4058_512.gif" id="video-background">
-            <!-- this is gif trying -->
          <div class="tittle">
           <h1>CreatiVue.. Visualize. Create. Share. CreatiVue.. Visualize. Create. Share. CreatiVue.. Visualize. Create. Share.</h1>
          </div>
@@ -24,7 +21,7 @@
         <% if (posts && posts.length > 0) { %>
             <% posts.forEach(postItem => { %>
                 <div class="cards">
-                    <img src="../images/uploads/<%= postItem.image %>" alt="">
+                    <img src="../images/uploads/<%= postItem.image %>" class="images" alt="">
                     <div class="name"><%= postItem.tittle %></div>
                     <a href="/feed/down/<%= postItem._id %>">
                         <img class="down" src="../images/default/download-7.png" alt="">

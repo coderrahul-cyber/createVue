@@ -169,7 +169,6 @@ body::-webkit-scrollbar {
   height: 100%;
   /* position: absolute; */
   width: 100%;
-  image-rendering: optimizeQuality;
   object-fit: cover;
   transition: all 0.3s ease;
 }

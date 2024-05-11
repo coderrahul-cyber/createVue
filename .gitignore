@@ -1,7 +1,5 @@
 public/images/dp
 public/images/uploads
-public/font
-public/videos
 public/stylesheets/loading.css
 node_modules
 views/loading.ejs
