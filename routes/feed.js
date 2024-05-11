@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
        // mongoose me aggreate is used for to processes the data records and return computed results . like we have different ,methods in array .
         const randomPosts = await postModel.aggregate([
             // isse me sample use hum kiya kyuki sample is used to take random records from the data base it size as a object (which means that that number records will take randomly from data base)
-            { $sample: { size: 16 } }
+            { $sample: { size: 14 } }
         ]);
         
 
