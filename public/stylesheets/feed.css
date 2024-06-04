@@ -102,8 +102,8 @@ header {
   /* image-rendering: optimizeQuality; */
   border-radius: 15px;
   position: relative;
-  width:15vw;
-  height: 15vw;
+  width:20vw;
+  height: 20vw;
   transition: all 0.3s ease;
   object-fit: cover;
   object-position: center;
@@ -123,11 +123,7 @@ header {
   filter: invert(1);
 }
 
-.cards:hover .name{
-  text-transform: capitalize;
-  margin-top: 6px;
-  opacity: 1;
-}
+
 .cards .name {
   text-align: center;
   position: relative;
